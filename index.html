@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+        <script type="text/javascript" src="js/phaser.min.js"></script>
+        <script src="js/Boot.js"></script>
+        <script src="js/Preloader.js"></script>
+        <script src="js/MainMenu.js"></script>
+        <script src="js/Game2.js"></script>
+        <style>
+            body {background:black}
+            *{margin:0;padding:0}
+            #target{
+            }
+
+            @font-face {
+                font-family:"Press Start 2P";
+                src: url("PressStart2P.ttf")
+            }
+        </style>
+        <title></title>
+    </head>
+    <body>
+
+        <script type="text/javascript">
+            window.onload = function() {
+                score = 0;
+                var game = new Phaser.Game(452, 652, Phaser.AUTO, 'target');
+                game.state.add('Boot', Game.Boot);
+                game.state.add('Preloader', Game.Preloader);
+                game.state.add('MainMenu', Game.MainMenu);
+                game.state.add('Game', Game.Game);
+                game.state.start('Boot');
+            };
+        </script>
+        <div id="target"></div>
+    </body>
+</html>
