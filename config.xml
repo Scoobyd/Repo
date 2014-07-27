@@ -4,9 +4,9 @@
         id        = "sk.svejkgames.redandgreen"
         versionCode="1" 
         version   = "1.0.0">
-
-    <!-- versionCode is optional and Android only -->
-
+<preference name="Orientation" value="portrait" />
+<preference name="Fullscreen" value="true" />
+<gap:plugin name="org.apache.cordova.media" />
     <name>Red and Green</name>
 
     <description>
